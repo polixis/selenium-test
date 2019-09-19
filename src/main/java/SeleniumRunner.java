@@ -18,7 +18,7 @@ public class SeleniumRunner {
     private static void runGecko(String[] args) {
         System.setProperty("webdriver.gecko.driver",
                 args.length > 0
-                        ? args[0]
+                        ? args[0] + "/geckodriver"
                         : "F:\\work\\selenium drivers\\geckodriver.exe");
         FirefoxOptions options = new FirefoxOptions()
                 .addArguments("--headless");
@@ -29,7 +29,7 @@ public class SeleniumRunner {
     private static void runChrome(String[] args) {
         System.setProperty("webdriver.chrome.driver",
                 args.length > 0
-                        ? args[0]
+                        ? args[0] + "/chromedriver"
                         : "F:\\work\\selenium drivers\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions()
                 .addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
